@@ -1,0 +1,15 @@
+name: flutter_sim_check_example
+description: Example app for flutter_sim_check
+publish_to: none
+version: 1.0.0
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_sim_check:
+    path: ..
+
+flutter:
+  uses-material-design: true
