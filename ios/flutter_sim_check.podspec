@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'flutter_sim_check'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'Flutter plugin to detect SIM card presence and carrier info.'
   s.description      = <<-DESC
 A new Flutter plugin to check SIM card presence and get carrier information on iOS and Android.
