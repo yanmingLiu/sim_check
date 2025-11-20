@@ -1,6 +1,6 @@
 name: flutter_sim_check
 description: Flutter plugin to detect SIM card presence and carrier info.
-version: 0.0.1
+version: 0.0.2
 environment:
   sdk: ">=3.0.0 <4.0.0"
 

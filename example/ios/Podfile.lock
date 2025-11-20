@@ -1,6 +1,6 @@
 PODS:
   - Flutter (1.0.0)
-  - flutter_sim_check (0.0.1):
+  - flutter_sim_check (0.0.2):
     - Flutter
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
-  flutter_sim_check: c368ab8ef8e9cefc15eb320cd432dc8e825061d8
+  flutter_sim_check: 83d85d56b6516e7afc7a638240ce094f765fafc0
 
 PODFILE CHECKSUM: 251cb053df7158f337c0712f2ab29f4e0fa474ce
 
