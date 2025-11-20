@@ -20,17 +20,18 @@ public class FlutterSimCheckPlugin: NSObject, FlutterPlugin {
     private func getSimInfo() -> [String: Any] {
         var info: [String: Any] = [:]
         let networkInfo = CTTelephonyNetworkInfo()
+
+        let hasSim = info.serviceCurrentRadioAccessTechnology?.values.count ?? 0 != 0
+
         if let providers = networkInfo.serviceSubscriberCellularProviders {
             for (_, carrier) in providers {
-                let hasSim = carrier.isoCountryCode != nil
-                info["hasSimCard"] = hasSim
                 info["carrierName"] = carrier.carrierName
                 info["mcc"] = carrier.mobileCountryCode
                 info["mnc"] = carrier.mobileNetworkCode
                 return info
             }
         }
-        info["hasSimCard"] = false
+        info["hasSimCard"] = hasSim
         return info
     }
 }
