@@ -190,18 +190,28 @@ SIM 卡信息数据类。
 
 ## 运行示例
 
+进入示例工程目录并运行：
+
 ```bash
 cd example
 flutter run
 ```
 
+如需跳过 Gradle 依赖版本检查运行（适用于特定构建环境）：
+
+```bash
+flutter run --android-skip-build-dependency-validation
+```
+
 ## 注意事项
 
-1. **权限要求**: 在 Android 上需要 `READ_PHONE_STATE` 权限
-2. **iOS 限制**: 部分信息在 iOS 模拟器上可能无法正确获取
-3. **网络状态**: 某些信息需要在有网络连接时才能获取
-4. **设备差异**: 不同设备厂商可能返回不同格式的数据
+1. **权限要求**: 在 Android 上需要 `READ_PHONE_STATE` 权限。
+2. **AGP 9+ 兼容支持**: 本插件的 Android 构建配置（`android/build.gradle.kts`）已适配 AGP 9+ 与新版 DSL，并动态向下兼容旧版 AGP。如果宿主项目升级至 AGP 9+，建议同时升级 Gradle Wrapper 至 9.1.0+ 及 Kotlin 至 2.3.20+。如遇到临时构建告警，可增加 `--android-skip-build-dependency-validation` 标志启动。
+3. **iOS 限制**: 部分信息在 iOS 模拟器上可能无法正确获取。
+4. **网络状态**: 某些信息需要在有网络连接时才能获取。
+5. **设备差异**: 不同设备厂商可能返回不同格式的数据。
 
 ## 许可证
 
 MIT License
+
