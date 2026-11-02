@@ -9,9 +9,9 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'flutter_sim_check example',
-      home: const SimPage(),
+      home: SimPage(),
     );
   }
 }
@@ -29,12 +29,15 @@ class _SimPageState extends State<SimPage> {
     super.initState();
     _load();
   }
+
   Future<void> _load() async {
     final info = await FlutterSimCheck.getSimInfo();
     setState(() {
-      text = 'hasSim: ${info.hasSimCard}\ncarrier: ${info.carrierName ?? "-"}\nMCC: ${info.mcc ?? "-"}\nMNC: ${info.mnc ?? "-"}';
+      text =
+          'hasSim: ${info.hasSimCard}\ncarrier: ${info.carrierName ?? "-"}\nMCC: ${info.mcc ?? "-"}\nMNC: ${info.mnc ?? "-"}';
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
